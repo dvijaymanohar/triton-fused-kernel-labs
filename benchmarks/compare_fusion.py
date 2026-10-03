@@ -1,4 +1,6 @@
-import statistics, torch
+import statistics, torch, sys
+from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from examples.fused_bias_relu import fused_bias_relu
 
 if not torch.cuda.is_available(): raise SystemExit("CUDA GPU required")
